@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <h1 style="text-align: center;   background: #838d2f8a; padding: 7px;">Personal Expense tracker</h1>
+  <div class="container">
+    <nav>
+        <ul>
+          <li><a href="">
+            <i class="fas fa-bars" style="color: black;"></i>
+            <span class="nav-item" Style="color:black; font-size:20px; font-weight:600" >Dashboard</span>
+          </a></li>
+        <li><a href="">
+          <i class="fas fa-home"></i>
+          <span class="nav-item">Home</span>
+        </a></li>
+        <li class="active"><a href="#">
+          <i class="fas fa-wallet"></i>
+          <span class="nav-item">Add Expense</span>
+        </a></li>
+        <li><a href="Plans.html">
+          <i class="fas fa-piggy-bank"></i>
+          <span class="nav-item">Budget plans</span>
+        </a></li>
+        <li><a href="report.html">
+          <i class="fas fa-receipt"></i>
+            <span class="nav-item">Expense log</span>
+          </a></li>
+        <li><a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Add Expense</h1>
+        <div>
+          <form action="">
+            <label for="amnt">Expense Amount</label>
+            <input type="number" step="5" id="amnt" name="amount" placeholder="Expense amount" required>
+            
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" placeholder="Select date" required>
+        
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="food">Food</option>
+              <option value="clothes">Clothes</option>
+              <option value="rent">Rent</option>
+              <option value="grocery">Grocery</option>
+              <option value="Fuel">fuel</option>
+              <option value="stationary">Stationary</option>
+              <option value="other">Others</option>
+            </select>
+
+            <label for="note">Description</label>
+            <input type="text" id="note" name="note" placeholder="Decribe your expense" maxlength="50">
+          
+            <input type="submit" value="Add expense">
+          </form>
+        </div>
+
+      </div>
+      
+
+    
+  </div>
+
+</body>
+</html>

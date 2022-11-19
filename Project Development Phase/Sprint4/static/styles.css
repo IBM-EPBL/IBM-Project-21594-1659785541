@@ -1,0 +1,226 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: rgb(226, 226, 226);
+}
+nav{
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 280px;
+  /* width: 280px; */
+  background: #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+nav:hover{
+  width: 280px;
+  transition: 1s;
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+  padding-bottom: 3rem;
+}
+
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  width: 280px;
+  font-size: 14px;
+  color: rgb(85, 83, 83);
+  display: table;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  background: #eee;
+}
+a:hover i{
+  color: #34AF6D;
+  transition: 0.5s;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+.container{
+  display: flex;
+}
+
+/* MAin Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+
+}
+.main-top{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+/*active page*/
+.active{
+  background-color: #4AD489;
+}
+.active a:hover{
+  background-color: #4AD489;
+  color: #000;
+}
+.active a:hover i{
+  color: #000;
+}
+.active i{
+color: #000;
+}
+.active span{
+  color: #000;
+  font-weight: 600;
+}
+
+
+/*input tags*/
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: larger;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+    font-size: larger;
+  }
+label{
+    font-weight: 700;
+    font-size: larger;
+}
+  /* expense table*/
+  #report {
+    border-collapse: collapse;
+    margin-left: -25%;
+    width: 150%;
+  }
+  
+  #report td, #report th {
+    background-color: white;
+    border: 1px solid rgb(231, 231, 231);
+    padding: 8px;
+  }
+
+  
+  #report tr:hover td {background-color: rgba(211, 211, 211, 0.88);}
+  
+  #report th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+  /*home*/
+  .homecard{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .homecard div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius:5px ;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+  }
+  .homecard div h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: #297b2e;
+    align-items: center;
+    margin: auto;
+    
+  }

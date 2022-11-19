@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Expense Tracker</title>
+  <link rel="stylesheet" href="static/styles.css" />
+  <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <h1 style="text-align: center;   background: #838d2f8a; padding: 7px;">Personal Expense tracker</h1>
+  <div class="container">
+    <nav>
+        <ul>
+          <li><a href="#">
+            <i class="fas fa-bars" style="color: black;"></i>
+            <span class="nav-item" Style="color:black; font-size:20px; font-weight:600" >Dashboard</span>
+          </a></li>
+          <li><a href="{{url_for('home')}}">>
+            <i class="fas fa-home"></i>
+            <span class="nav-item">Home</span>
+          </a></li>
+        <li><a href="{{url_for('expense')}}">
+          <i class="fas fa-wallet"></i>
+          <span class="nav-item">Add Expense</span>
+        </a></li>
+        <li class="active"><a href="#">
+            <i class="fas fa-clipboard-list"></i>
+            <span class="nav-item">Expense log</span>
+          </a></li>
+        <li><a href="{url_for('wel')}}">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="nav-item">Log out</span>
+        </a></li>
+      </ul>
+    </nav>
+
+
+    <section class="main">
+      <div class="main-top">
+        <h1>Expense log</h1>
+        <div>
+            <table id="report">
+                <tr>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                </tr>
+                {% for acc in account %}
+                <tr>
+                  <td>{{ acc[4] }}</td>
+                  <td>{{ acc[5] }}</td>
+                  <td>{{ acc[6] }}</td>
+                  <td>{{ acc[7] }}</td>                     
+                </tr>
+                {% endfor %}
+              </table>
+              
+        </div>
+
+      </div>
+    
+  </div>
+
+</body>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "7f157622-db65-4138-8cca-60e657ef7461", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "5ee64e34-e58d-45b6-8d1b-e739162fb7cf", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</html>
